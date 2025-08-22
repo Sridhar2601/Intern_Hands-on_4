@@ -1,0 +1,54 @@
+.carousel-caption {
+    padding-bottom: 475px;
+}
+
+.discount {
+    border: 2px solid orange;
+    border-radius: 30px;
+    background-color: darkblue;
+    color: white;
+}
+
+.card {
+    width: 350px;
+    box-shadow: 1px 1px 1px black;
+}
+
+.card-image {
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.card-image img {
+    width: 150px;
+    height: 150px;
+}
+
+.card-content {
+    background:black;
+    color: white;
+    padding: 20px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+
+.line{
+    border: 2px solid orange;
+    background-color:blue;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#icon{
+    border: 2px solid white;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    width: 40px;
+    border-radius: 50px;
+}
