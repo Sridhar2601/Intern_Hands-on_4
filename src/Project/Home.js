@@ -336,34 +336,76 @@ import Book from './Book';
 export default function Home() {
   return (
     <div>
-      {/* Carousel */}
-      <div id="carouselExampleCaptions" className="carousel slide">
-        <div className="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      {/* Responsive Carousel */}
+<div id="carouselExampleCaptions" className="carousel slide">
+  {/* Indicators */}
+  <div className="carousel-indicators">
+    {[0, 1, 2].map((i) => (
+      <button
+        key={i}
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide-to={i}
+        className={i === 0 ? "active" : ""}
+        aria-current={i === 0 ? "true" : undefined}
+        aria-label={`Slide ${i + 1}`}
+      ></button>
+    ))}
+  </div>
+
+  {/* Carousel Items */}
+  <div className="carousel-inner">
+    {[1, 2, 3].map((i) => (
+      <div key={i} className={`carousel-item ${i === 1 ? "active" : ""}`}>
+        <img
+          src="https://themewagon.github.io/feane/images/hero-bg.jpg"
+          className="d-block w-100"
+          alt={`Slide ${i}`}
+        />
+        <div
+          className="carousel-caption text-start"
+          style={{
+            backgroundColor: "rgba(0,0,0,0.4)",
+            borderRadius: "10px",
+            padding: "10px",
+          }}
+        >
+          <h5 className="fs-5 fs-md-3">Fast Food Restaurant</h5>
+          <p className="fs-6 fs-md-5">
+            Delicious food prepared fresh for you. Order now and enjoy!
+          </p>
+          <a
+            className="btn btn-warning ps-4 pe-4"
+            style={{ borderRadius: 15 }}
+          >
+            Order Now
+          </a>
         </div>
-        <div className="carousel-inner">
-          {[1, 2, 3].map((i) => (
-            <div key={i} className={`carousel-item ${i === 1 ? 'active' : ''}`}>
-              <img src="https://themewagon.github.io/feane/images/hero-bg.jpg" className="d-block w-100" alt="Slide" />
-              <div className="carousel-caption d-none d-md-block text-start">
-                <h5>Fast Food Restaurant</h5>
-                <p className="d-none d-md-block">Delicious food prepared fresh for you. Order now and enjoy!</p>
-                <a className="btn btn-warning ps-4 pe-4" style={{ borderRadius: 15 }}>Order Now</a>
-              </div>
-            </div>
-          ))}
-        </div>
-        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Next</span>
-        </button>
       </div>
+    ))}
+  </div>
+
+  {/* Controls */}
+  <button
+    className="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExampleCaptions"
+    data-bs-slide="prev"
+  >
+    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Previous</span>
+  </button>
+  <button
+    className="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExampleCaptions"
+    data-bs-slide="next"
+  >
+    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Next</span>
+  </button>
+</div>
+
 
       {/* Discounts */}
       <div className="container pt-5 mt-5">
