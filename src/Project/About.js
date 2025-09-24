@@ -26,7 +26,7 @@ import './CSS/Home.css';
 export default function About() {
     return (
         <div style={{ backgroundColor: 'black' }}>
-            <div className='container py-5'>
+            <div className='container py-5 me-5'>
                 <div className='row align-items-center'>
                     {/* Image Section */}
                     <div className='col-lg-6 mb-4 mb-lg-0 text-center'>
@@ -43,7 +43,7 @@ export default function About() {
                         <p>
                             There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
                         </p>
-                        <button className='btn btn-warning mt-3 px-5 py-2 me-5 rounded-3'>
+                        <button className='btn btn-warning mt-3 px-5 py-2 rounded-3'>
                             Read More
                         </button>
                     </div>
